@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>data</title>
+
+    <meta name="description" content="We generate a lot of data as we go about our lives">
+    <meta name="author" content="Ben Foxall">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="code-github.css">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="components/wo-reveal/theme/white.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Using browsers to visualise data</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Hi, I'm Ben</h1>
+          </section>
+
+          <section data-background="images/me-2014.jpg">
+          </section>
+
+          <section data-background="images/me-2015.jpg">
+          </section>
+
+
+          <section>
+            <p><a href="http://pusher.com">pusher.com</a></p>
+            <img src="images/pusher_logo_p_dark.svg" class="stretch"/>
+          </section>
+          <!-- <section id="jsoxford-old">
+            <img src="img/jsoxford.png" />
+            <aside class="notes">
+              <p>JSOxford</p>
+              <p>talks</p>
+              <p>exit: we're redesiging our logo</p>
+            </aside>
+          </section> -->
+
+          <section id="jsoxford">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 999.6 999.6" enable-background="new 0 0 999.6 999.6" xml:space="preserve">
+
+            <!-- yellow background -->
+            <rect x="0" y="0" fill="#F3DF49" width="999.6" height="999.6"/>
+
+            <!-- white bar 1 -->
+            <polygon class="jo-wbar-1 jo-wbars jo-bars" opacity="0.8" fill="#FFFFFF" points="-20.3,704.3 645.7,-29.8 1020.7,-29.8 1021.7,101.2 -20.3,846.2 "/>
+
+            <!-- colour bar 1 (pink) -->
+            <polygon class="jo-cbar-1 jo-cbars jo-bars" fill="#FF00D7" points="264.7,178.5 1020.7,409 1020.7,597 "/>
+
+            <!-- colour bar 2 (red) -->
+            <polygon class="jo-cbar-2 jo-cbars jo-bars" fill="#FF0043" points="264.7,178.5 1020.7,597.5 1020.7,731.5 "/>
+
+            <!-- standard horse -->
+            <path class="jo-standard-horse" d="M153.3,302.9c2.3,12.5-2,23.2-4.1,34.2c-0.5,2.4-0.5,4.9-1.1,7.4
+              c-0.4,1.7-0.9,3.5-2,4.8c-3.3,4-3.5,7.9,0.6,11.3c1.9,1.6,4.5,2.2,6.8,3.2c0.9-2.4,2.4-4.7,2.6-7.2c1.6-19.2,5-37.9,16.4-54.1
+              c1.7-2.4,4.8-3.7,7-5.7c8.1-7.7,16.2-15.3,24-23.3c2.2-2.3,3.9-5.4,5-8.4c2.6-7.5,4.8-15.2,6.9-22.9c0.5-1.9,0.9-4,0.6-5.9
+              c-1.1-7.7,1-14.4,5.1-21c4.4-7,8.1-14.4,12-21.5c9.1,1.9,14.4,8.5,20.7,13.4c4,3.1,7.3,6.6,8.4,11.9c0.8,3.6,4.1,4.6,7.3,4.8
+              c5,0.3,10.3-3.9,11.6-8.7c1.6-5.8,1.5-10.8-1.4-16.9c-4.2-9.1-7.7-19.3-7.9-29.1c-0.1-7.8-3.7-13.3-5.5-18.2
+              c3.9-6.9,7.2-12.8,10.6-18.7c-0.5-0.4-1-0.9-1.5-1.3c-5.4,4-10.9,8-16.3,12c-0.4-0.4-0.7-0.8-1.1-1.2c3.4-3.1,6.8-6.2,10.2-9.2
+              c-0.2-0.4-0.4-0.7-0.7-1.1c-1.3,0.4-2.7,0.7-3.9,1.3c-23.6,10.3-48.1,18.4-70,32.1c-4.4,2.8-7.9,7-11.9,10.5
+              c-6.5,5.6-11.8,12.9-20.4,15.6c-3.3,1-7.1,1.3-10.4,0.6c-5.8-1.2-11.6-3-17.2-5.2c-5.6-2.2-10.7-6.1-16.4-7.8
+              c-6.8-2-14.6-4.7-21.1-3.3c-16,3.4-32.1,4.8-48.2,6.3c-4.6,0.4-9.5-2.2-14.2-3.5c-2-0.6-3.9-1.6-6-2.5c-1.6,14,11.8,23.8,33.5,18.2
+              c-4.4,10.6-4.5,21.8-4.3,33c0.1,7.1-4,10.8-10,12.4c-4.8,1.3-5.7,4-5.7,8.6c0.2,13.5,0.1,27-0.5,40.4c-0.1,3.5-1.5,7.5-3.5,10.4
+              c-3.1,4.3,1.4,12,5.7,11.7c1.5-0.1,4-2.5,4.2-4.1c1.3-8.3,2.3-16.7,2.8-25.2c0.4-6.5,0-13,0.1-19.5c0.1-6.3,1.3-7,7.3-7.2
+              c4.4-0.2,8.8-1.7,13.1-3c3.3-1,4.8-0.4,6.5,2.9c5.4,11,11.1,22,17.2,32.6c3.5,6,5.6,12,4.6,18.9c-0.6,4.1,1.6,6.4,5,7.5
+              c1.9,0.6,4.5,0.6,6.1-0.3c0.9-0.5,0.8-3.6,0.5-5.4c-2.5-15.5-10.5-29-16.8-43c-1.2-2.6-2.3-5.1-3.7-8.4c9.8-1.4,19.1-6.6,27.9,1.7
+              c0.4,0.3,0.9,0.5,1.3,0.8c10.1,8.8,22.3,10.9,35.2,11.5c5.5,0.2,6.5,1.7,5.7,7.2c0,0.2,0,0.3-0.1,0.5c-2.4,13.9-6.1,17.2-20.6,18.1
+              c-1,0.1-2.4-0.5-2.9-1.3c-2.4-3.2-5.1-4.4-8.8-2.2c-3.3,2-5.5,4.6-5.4,9C132.4,304.3,142.7,307.1,153.3,302.9z"/>
+
+            <!-- white bar 2 -->
+            <polygon class="jo-wbar-2 jo-wbars jo-bars" opacity="0.9" fill="#FFFFFF" points="1021.7,200.2 -20.3,875.2 -20.3,952.2 1021.7,421.2 "/>
+
+            <!-- colour bar 3 (blue) -->
+            <polygon class="jo-cbar-3 jo-cbars jo-bars" fill="#44DA3C" points="257.7,175.8 687.7,1021.2 358.7,1021.2 "/>
+
+            <!-- colour bar 4 (light blue) -->
+            <polygon class="jo-cbar-4 jo-cbars jo-bars" fill="#118EF4" points="257.7,175.8 1021.7,937.5 1021.7,1021.2 915.7,1021.2 "/>
+
+            <!-- colour bar 5 (green) -->
+            <polygon class="jo-cbar-5 jo-cbars jo-bars" fill="#24D6FF" points="257.7,175.8 915.7,1021.2 687.7,1021.2 "/>
+
+            <!-- JS -->
+            <g class="jo-js">
+              <path fill="#FFFFFF" d="M838.1,566.4c-17-33.7-46.3-58.6-81.6-68.6c-31.5-9-63.5-9.3-95.3-1.2c-25.8,6.6-48.1,19.4-65.5,39.9
+                c-21.2,25.1-29,54.5-27.5,86.8c1.4,30.1,10.4,57.2,30.7,79.9c15.3,17.2,34,30,54.5,39.9c22.8,10.9,46.3,20.4,69.1,31.4
+                c11.9,5.7,23.8,12.3,34.1,20.4c15.8,12.4,19.3,35.1,9.5,52c-6.6,11.4-17,18.2-29.3,21.9c-33.9,10.1-76.4,3.7-104.4-30.5
+                c-5.7-6.9-10.8-14.3-16.4-21.8c-25.2,14.6-50.5,29.3-75.6,43.8c0.1,1,0,1.3,0.1,1.6c0.4,0.9,0.8,1.8,1.3,2.7
+                c14.9,27.7,35.4,50.3,62.9,65.4c56.9,31.4,116.7,34.7,177.6,14.2c34.2-11.5,59.7-33.8,73.8-67.9c9-21.9,10.7-44.9,8.4-68.2
+                c-2.6-26.8-11.9-50.7-30.3-70.8c-17.1-18.8-38.1-32.2-60.7-43.1c-22.8-11-46.1-20.7-69.1-31.2c-11.7-5.3-23-11.2-32.4-20.4
+                C655,626,654.5,586,688.5,575.9c23.5-6.9,45-2.1,61.9,16.8c5.5,6.1,10,13.2,15.3,20.3C789.6,597.6,813.7,582.1,838.1,566.4z
+                 M210.2,870.4c0.3,1.1,0.4,1.8,0.7,2.4c15.2,31.1,37.4,55.6,69.5,69.5c41.9,18.3,85.1,18.9,128.3,5.1c34.2-11,57.7-34.1,70.8-67.7
+                c8.5-21.8,10.7-44.5,10.7-67.6c0-103.5,0-206.9,0.1-310.4c0-4.5-1.4-5.6-5.7-5.5c-27.2,0.2-54.3,0.1-81.5,0.1c-7.2,0-7.2,0-7.2,7.4
+                c0,103.6,0,207.3-0.1,310.9c0,6.5-0.4,13-1.4,19.4c-2,13.2-6.9,25.1-19.2,32.3c-13.4,7.9-45.6,10.9-62.4-6
+                c-7.9-7.9-14-17.6-20.8-26.6c-2.1-2.8-3.6-5.9-5.6-9.4C260.7,839.8,235.5,855.1,210.2,870.4z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M838.1,566.4c-24.4,15.7-48.6,31.2-72.5,46.6c-5.3-7.1-9.7-14.2-15.3-20.3
+                c-16.9-18.8-38.4-23.7-61.9-16.8c-33.9,10-33.5,50.1-16.3,66.8c9.4,9.1,20.7,15,32.4,20.4c23,10.5,46.4,20.3,69.1,31.2
+                c22.6,10.9,43.6,24.3,60.7,43.1c18.3,20.1,27.6,44,30.3,70.8c2.3,23.3,0.6,46.3-8.4,68.2c-14,34-39.6,56.4-73.8,67.9
+                c-61,20.5-120.8,17.1-177.6-14.2c-27.5-15.2-48-37.7-62.9-65.4c-0.5-0.9-0.9-1.8-1.3-2.7c-0.1-0.3-0.1-0.7-0.1-1.6
+                c25-14.5,50.3-29.1,75.6-43.8c5.6,7.5,10.8,14.9,16.4,21.8c28,34.2,70.5,40.6,104.4,30.5c12.3-3.7,22.7-10.5,29.3-21.9
+                c9.8-17,6.3-39.6-9.5-52c-10.3-8.1-22.2-14.7-34.1-20.4c-22.8-11-46.3-20.4-69.1-31.4c-20.5-9.9-39.2-22.7-54.5-39.9
+                c-20.3-22.8-29.3-49.8-30.7-79.9c-1.5-32.4,6.3-61.8,27.5-86.8c17.4-20.5,39.6-33.3,65.5-39.9c31.8-8.1,63.7-7.8,95.3,1.2
+                C791.8,507.9,821.1,532.8,838.1,566.4z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M210.2,870.4c25.3-15.3,50.5-30.6,76.2-46.1c2,3.4,3.6,6.6,5.6,9.4
+                c6.8,9,12.9,18.7,20.8,26.6c16.8,16.9,49,13.9,62.4,6c12.3-7.2,17.1-19.1,19.2-32.3c1-6.4,1.4-12.9,1.4-19.4
+                c0.1-103.6,0.1-207.3,0.1-310.9c0-7.4,0-7.4,7.2-7.4c27.2,0,54.3,0.1,81.5-0.1c4.3,0,5.7,1,5.7,5.5c-0.1,103.5-0.1,206.9-0.1,310.4
+                c0,23.1-2.3,45.9-10.7,67.6c-13,33.6-36.5,56.7-70.8,67.7c-43.2,13.8-86.3,13.2-128.3-5.1c-32.1-14-54.3-38.4-69.5-69.5
+                C210.6,872.2,210.5,871.6,210.2,870.4z"/>
+            </g>
+
+            <!-- Oxford -->
+            <g class="jo-ox">
+              <path d="M932.2,493.7c27,0,42.1,15.4,42.1,38.1c0,22.7-15.2,38.1-42.1,38.1c-27,0-42.8-15.4-42.8-38.1
+                C889.3,509.1,905.2,493.7,932.2,493.7z M932.2,547.6c14.9,0,23.4-6,23.4-15.9c0-9.8-8.6-15.9-23.4-15.9c-14.9,0-24.2,6-24.2,15.9
+                C908,541.6,917.3,547.6,932.2,547.6z"/>
+              <path d="M932.9,595l39.8-20.9v24.2l-13.4,5.5c-3.8,1.8-8.3,3.5-13.6,5.8v0.5c5.3,1.8,9.8,3.5,13.6,5l13.4,4.8v23.2l-40.8-20.9
+                l-41.1,22.2v-24.2l14.6-6.6c4.3-2,8.6-3.8,13.6-5.8v-0.5c-5-1.8-9.3-3.5-13.6-5.3l-14.6-6v-23.2L932.9,595z"/>
+              <path d="M972.8,654.7v53.4h-18.1v-31.8H939v27.2h-18.1v-27.2h-30v-21.7H972.8z"/>
+              <path d="M932.2,717.5c27,0,42.1,15.4,42.1,38.1s-15.2,38.1-42.1,38.1c-27,0-42.8-15.4-42.8-38.1S905.2,717.5,932.2,717.5z
+                 M932.2,771.4c14.9,0,23.4-6,23.4-15.9c0-9.8-8.6-15.9-23.4-15.9c-14.9,0-24.2,6-24.2,15.9C908,765.4,917.3,771.4,932.2,771.4z"/>
+              <path d="M890.9,852.3l27.5-14.1v-8.3h-27.5v-21.7h81.9v31c0,17.6-6,32.8-26.5,32.8c-11.7,0-19.4-5.3-23.7-13.2l-31.8,17.8V852.3z
+                 M935.5,829.9v7.8c0,8.6,3.8,13.1,10.8,13.1s9.3-4.5,9.3-13.1v-7.8H935.5z"/>
+              <path d="M972.8,887.6v24.2c0,24.9-11.6,42.1-40.6,42.1s-41.3-17.1-41.3-40.8v-25.5H972.8z M908.2,910.5c0,11.8,4.8,21.2,23.9,21.2
+                s23.2-9.3,23.2-21.2v-1.3h-47.1V910.5z"/>
+            </g>
+
+            </svg>
+
+          </section>
+
+          <section>
+            <p><a href="https://summerofhacks.io">summerofhacks.io</a></p>
+            <img src="images/soh.svg" class="stretch" />
+
+          </section>
+
+
+        </section>
+
+        <!--section>
+          <section>
+            <h1>[intro]</h1>
+          </section>
+          <section>
+            <img src="images/Last.fm_Logo_Black.png" height="100"/>
+          </section>
+          <section>
+            <h2>[@benjaminbenben lastfm]</h2>
+          </section>
+        </section-->
+
+        <section>
+
+          <section>
+            <img src="images/runkeeper.png" />
+          </section>
+
+          <section>
+            <img src="images/healthgraph.png"  style="background-color:#444;padding:1em;border-radius:1em"/>
+          </section>
+
+          <section>
+            <!-- <h1>[overview]</h1> -->
+            <h3><span class="heading-1">Visualisation</span></h3>
+            <h3><span class="heading-2">Getting data</span></h3>
+            <h3><span class="heading-3">Drawing data</span></h3>
+            <h3><span class="heading-4">Being personal</span></h3>
+            <h3><span class="heading-5">Being generative</span></h3>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h1><span class="heading-1">Visualisation</span></h1>
+
+            <!--
+            PURPOSE
+
+            HUMANS NEED DATA TO BE VISUAL TO UNDERSTAND THEM
+
+            -->
+          </section>
+
+          <!-- <section data-transition="none">
+            <h1>Graphs</h1>
+          </section> -->
+
+          <!-- <section  data-transition="none">
+            <h1>Data &rarr; Graphs</h1>
+          </section> -->
+
+          <section>
+            <div class="bang-fragments">
+              <h2><span class="fragment">Data &rarr;</span> Pictures <span class="fragment">&rarr; Humans</span></h2>
+            </div>
+          </section>
+
+        </section>
+
+
+        <section>
+          <section>
+            <h1>Why Visualise</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>for the humans</h2>
+
+            <aside class="notes">
+              You're helping a person understand Something
+               * Pulsars?
+            </aside>
+          </section>
+
+          <section data-background="images/pulsars-data.png" data-background-size="cover">
+            <aside class="notes">
+              PSR B1919+21
+           </aside>
+          </section>
+
+          <section data-background="images/pulsars.png" data-background-size="contain">
+            <aside class="notes">
+              PSR B1919+21
+
+              Jocelyn Bell Burnell and Antony Hewish
+           </aside>
+          </section>
+
+          <section>
+            <h1>Preattentive attributes</h1>
+          </section>
+          <section>
+            <table class="nines" data-slide-script="nines">
+              <tr><td class="nines-num-3">3</td><td class="nines-num-2">2</td><td class="nines-num-4">4</td><td class="nines-num-4">4</td><td class="nines-num-5">5</td><td class="nines-num-9">9</td><td class="nines-num-6">6</td><td class="nines-num-4">4</td><td class="nines-num-7">7</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-5">5</td></tr>
+              <tr><td class="nines-num-4">4</td><td class="nines-num-9">9</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-8">8</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-2">2</td><td class="nines-num-4">4</td><td class="nines-num-2">2</td><td class="nines-num-5">5</td><td class="nines-num-2">2</td></tr>
+              <tr><td class="nines-num-6">6</td><td class="nines-num-1">1</td><td class="nines-num-5">5</td><td class="nines-num-5">5</td><td class="nines-num-8">8</td><td class="nines-num-1">1</td><td class="nines-num-4">4</td><td class="nines-num-9">9</td><td class="nines-num-1">1</td><td class="nines-num-6">6</td><td class="nines-num-9">9</td><td class="nines-num-4">4</td></tr>
+              <tr><td class="nines-num-4">4</td><td class="nines-num-5">5</td><td class="nines-num-2">2</td><td class="nines-num-4">4</td><td class="nines-num-6">6</td><td class="nines-num-6">6</td><td class="nines-num-4">4</td><td class="nines-num-8">8</td><td class="nines-num-1">1</td><td class="nines-num-7">7</td><td class="nines-num-8">8</td><td class="nines-num-8">8</td></tr>
+              <tr><td class="nines-num-5">5</td><td class="nines-num-8">8</td><td class="nines-num-6">6</td><td class="nines-num-3">3</td><td class="nines-num-4">4</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-3">3</td><td class="nines-num-1">1</td><td class="nines-num-1">1</td><td class="nines-num-1">1</td><td class="nines-num-6">6</td></tr>
+              <tr><td class="nines-num-4">4</td><td class="nines-num-3">3</td><td class="nines-num-4">4</td><td class="nines-num-5">5</td><td class="nines-num-9">9</td><td class="nines-num-7">7</td><td class="nines-num-9">9</td><td class="nines-num-7">7</td><td class="nines-num-8">8</td><td class="nines-num-3">3</td><td class="nines-num-4">4</td><td class="nines-num-3">3</td></tr>
+              <tr><td class="nines-num-1">1</td><td class="nines-num-4">4</td><td class="nines-num-6">6</td><td class="nines-num-9">9</td><td class="nines-num-7">7</td><td class="nines-num-5">5</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-2">2</td><td class="nines-num-6">6</td><td class="nines-num-7">7</td><td class="nines-num-7">7</td></tr>
+              <tr><td class="nines-num-4">4</td><td class="nines-num-3">3</td><td class="nines-num-8">8</td><td class="nines-num-2">2</td><td class="nines-num-2">2</td><td class="nines-num-2">2</td><td class="nines-num-1">1</td><td class="nines-num-8">8</td><td class="nines-num-5">5</td><td class="nines-num-5">5</td><td class="nines-num-8">8</td><td class="nines-num-3">3</td></tr>
+              <tr><td class="nines-num-6">6</td><td class="nines-num-5">5</td><td class="nines-num-7">7</td><td class="nines-num-6">6</td><td class="nines-num-6">6</td><td class="nines-num-5">5</td><td class="nines-num-3">3</td><td class="nines-num-3">3</td><td class="nines-num-8">8</td><td class="nines-num-1">1</td><td class="nines-num-9">9</td><td class="nines-num-9">9</td></tr>
+              <tr><td class="nines-num-3">3</td><td class="nines-num-7">7</td><td class="nines-num-2">2</td><td class="nines-num-2">2</td><td class="nines-num-3">3</td><td class="nines-num-5">5</td><td class="nines-num-5">5</td><td class="nines-num-3">3</td><td class="nines-num-7">7</td><td class="nines-num-2">2</td><td class="nines-num-5">5</td><td class="nines-num-3">3</td></tr>
+              <tr><td class="nines-num-2">2</td><td class="nines-num-6">6</td><td class="nines-num-1">1</td><td class="nines-num-5">5</td><td class="nines-num-1">1</td><td class="nines-num-7">7</td><td class="nines-num-1">1</td><td class="nines-num-7">7</td><td class="nines-num-6">6</td><td class="nines-num-6">6</td><td class="nines-num-6">6</td><td class="nines-num-7">7</td></tr>
+              <tr><td class="nines-num-1">1</td><td class="nines-num-3">3</td><td class="nines-num-6">6</td><td class="nines-num-1">1</td><td class="nines-num-4">4</td><td class="nines-num-1">1</td><td class="nines-num-1">1</td><td class="nines-num-2">2</td><td class="nines-num-8">8</td><td class="nines-num-4">4</td><td class="nines-num-6">6</td><td class="nines-num-7">7</td></tr>
+            </table>
+          </section>
+          <section>
+            <img src="images/preattentive.png" class="stretch" />
+          </section>
+
+          <!--section>
+            <h2>Preattentive attributes</h2>
+            <aside class="notes">
+              **Before** you've started engaging with it
+            </aside>
+          </section>
+
+          <section>
+            <h2>how many 9s</h2>
+          </section>
+
+          <section>
+            <h2>[image flicker]</h2>
+            <aside class="notes">
+              We're trying to utilise these effects to help people understand data
+            </aside>
+          </section-->
+
+        </section>
+
+        <section>
+          <section>
+            <h2>for the data</h2>
+
+            <aside class="notes">
+              You're focused on making that thing as clear as possible
+            </aside>
+          </section>
+
+          <section data-background="images/minard.svg" data-background-size="contain">
+            <aside class="notes">
+              Minard
+            </aside>
+          </section>
+
+          <section data-background="images/mathjaxsucks.png" data-background-size="contain">
+            <!-- $\text{data-ink ratio}=\frac{\text{``ink'' used to display the data}}{\text{total ``ink'' used to display the graphic}}$
+
+            <p><br /></p>
+
+            $\text{data density}=\frac{\text{number of entries in data matrix}}{\text{area of data graphic}}$ -->
+            <aside class="notes">
+              You're focused on making that thing as clear as possible
+               * Minard?
+            </aside>
+          </section>
+
+          <!-- <section data-background="images/meta-xkcd.png" data-background-size="contain">
+          </section> -->
+
+        </section>
+
+        <section>
+          <section>
+            <h2>for the pictures</h2>
+
+            <aside class="notes">
+              Where it's about the graph itself
+               * Making something pretty for the sake of it
+               * Infographics
+            </aside>
+          </section>
+
+
+          <section data-slide-script="tweetGlobe">
+          </section>
+
+          <section data-background="images/infographics.png" data-background-size="cover" data-background-transition="slide">
+
+            <aside class="notes">
+              Where it's about the graph itself
+               * Making something pretty for the sake of it
+               * Infographics
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>for other reasons</h2>
+
+            <aside class="notes">
+              Where the graph is purposefully misleading
+              (todo: try and make this positive)
+              * Truncated Axis
+              * Ignoring conventions
+            </aside>
+          </section>
+
+          <section>
+            <img src="images/misleading1_yaxis.png" />
+          </section>
+
+          <section>
+            <img src="images/misleading3_deaths.jpg" />
+          </section>
+
+        </section>
+
+        <section>
+          <h1><span class="heading-1">/</span></h1>
+        </section>
+
+
+        <section>
+          <section>
+            <h1><span class="heading-2">Getting data</span></h1>
+
+            <!--
+            THE POINT
+            We create a lot of data, but don't always have access to it.
+
+            We get it back in pictures instead of data.  This means we can't
+            do anything with it.
+
+            We're able to choose to proactively store our data, somewhere that we
+            can get it back.
+
+            [[WHAT'S THE PROBLEM WITH THIS?… Wrong angle.]]
+
+            These days, we have to accept that we're losing a lot of our data.
+
+            There's something powerful about giving a user their data. Like,
+            you can show them a picture of what their data looks like, but they
+            can't take it further.  If you give them a csv file as well as
+            a picture that you've generated, then they can take it even further.s
+
+
+            link: ok, we've established that humans need data to be in a picture
+            form
+            -->
+          </section>
+
+          <!-- <section>
+            <h3>How do we get access to our data?</h3>
+          </section> -->
+
+          <!-- <section>
+            <h3>The depressing answer&hellip;</h3>
+            <aside class="notes">
+              <p>&hellip; we can't.</p>
+              <p>With devices gathering more data</p>
+              <p>With smart devices pushing straight up</p>
+              <p>A lot of our data is gone forever</p>
+            </aside>
+          </section> -->
+
+          <!-- <section>
+            <h2>give us what we want</h2>
+          </section>
+
+          <section>
+            <h1>Picture vs. Data</h1>
+          </section>
+
+          <section>
+            <h1>Picture &amp; Data</h1>
+          </section> -->
+
+
+
+
+          <!-- <section>
+            <h2>We create a lot of data</h2>
+          </section>
+
+          <section>
+            <h2>csv vs. graph</h2>
+          </section> -->
+
+          <!-- <section>
+            <h2>We're losing our data</h2>
+          </section>
+
+          <section data-background="images/fitbit.jpg"></section>
+
+          <section data-background="images/fitbit-sleep.png" data-background-size="contain"></section>
+
+          <section>
+            <table style="font-size:50%">
+              <tr>
+                <th>Date</th><th>Minutes Asleep</th><th>Minutes Awake</th><th>Number of Awakenings</th><th>Time in Bed</th>
+              </tr>
+              <tr>
+                <td>06-08-2015</td><td>368</td><td>51</td><td>29</td><td>429</td>
+              </tr>
+            </table>
+          </section> -->
+
+
+
+
+          <!-- <section>
+            <h2>We generate <strong>lots</strong> of data</h2>
+          </section>
+
+          <section data-background="images/GPS_Receivers.jpg">
+          </section> -->
+
+
+
+
+
+          <!-- <section>
+            <h2>Our objects collect more data</h2>
+          </section>
+
+          <section>
+            <h2>Our objects are smart</h2>
+          </section> -->
+
+
+          <!-- <section>
+            <h1>public data</h1>
+            <h2 class="fragment">data.gov.uk</h2>
+            <h2 class="fragment">wikipedia</h2>
+            <h2 class="fragment">google</h2>
+            <h2 class="fragment">Ask people</h2>
+            <h2 class="fragment">Make stuff up</h2>
+          </section>
+
+          <section>
+            <h1>personal data</h1>
+            <h2 class="fragment">download from device</h2>
+            <h2 class="fragment"><span class="fragment highlight-blue">fetch back from the cloud</span></h2>
+          </section> -->
+
+        </section>
+
+        <!-- <section>
+          <section><img src="images/fitbit.png" /></section>
+          <section><img src="images/finder-fitbit-csv.png" /></section>
+          <section>
+            <table border="1" style="font-size:40%">
+            <tbody><tr><td>Date</td> <td>Calories Burned</td> <td>Steps</td> <td>Distance</td> <td>Floors</td> <td>Minutes Sedentary</td> <td>Minutes Lightly Active</td> <td>Minutes Fairly Active</td> <td>Minutes Very Active</td> <td>Activity Calories</td> </tr> <tr><td>01-08-2015</td> <td>2,665</td> <td>4,070</td> <td>3.57</td> <td>0</td> <td>1,289</td> <td>151</td> <td>0</td> <td>0</td> <td>696</td> </tr> <tr><td>02-08-2015</td> <td>3,445</td> <td>12,130</td> <td>10.63</td> <td>0</td> <td>583</td> <td>278</td> <td>15</td> <td>30</td> <td>1,715</td> </tr> <tr><td>03-08-2015</td> <td>3,218</td> <td>8,989</td> <td>7.87</td> <td>0</td> <td>682</td> <td>248</td> <td>11</td> <td>24</td> <td>1,398</td> </tr> <tr><td>04-08-2015</td> <td>3,449</td> <td>11,833</td> <td>10.37</td> <td>0</td> <td>629</td> <td>270</td> <td>31</td> <td>30</td> <td>1,708</td> </tr> <tr><td>05-08-2015</td> <td>3,113</td> <td>7,494</td> <td>6.57</td> <td>0</td> <td>737</td> <td>251</td> <td>11</td> <td>13</td> <td>1,281</td> </tr> <tr><td>06-08-2015</td> <td>3,462</td> <td>11,590</td> <td>10.16</td> <td>0</td> <td>651</td> <td>314</td> <td>26</td> <td>20</td> <td>1,782</td> </tr> <tr><td>07-08-2015</td> <td>3,184</td> <td>8,011</td> <td>7.02</td> <td>0</td> <td>620</td> <td>300</td> <td>7</td> <td>4</td> <td>1,412</td> </tr> <tr><td>08-08-2015</td> <td>2,972</td> <td>7,840</td> <td>6.87</td> <td>0</td> <td>687</td> <td>202</td> <td>24</td> <td>9</td> <td>1,169</td> </tr> <tr><td>09-08-2015</td> <td>2,754</td> <td>6,448</td> <td>6.71</td> <td>0</td> <td>1,345</td> <td>58</td> <td>1</td> <td>36</td> <td>790</td> </tr> <tr><td>10-08-2015</td> <td>2,072</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>11-08-2015</td> <td>2,071</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>12-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>13-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>14-08-2015</td> <td>2,072</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>15-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>16-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>17-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> <tr><td>18-08-2015</td> <td>2,070</td> <td>0</td> <td>0</td> <td>0</td> <td>1,440</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> </tr> </tbody></table>
+          </section>
+          <section><img src="images/fitbit-request.png" class="stretch" /></section>
+          <section>
+            <p style="font-size:70%">"&#36;os" "&#36;browser" "&#36;referrer" "&#36;referring_domain" "&#36;current_url"  <span class="fragment highlight-blue">"&#36;browser_version" "&#36;screen_height" "&#36;screen_width"</span> "mp_lib" "&#36;lib_version" "distinct_id" <span class="fragment highlight-blue">"city" "country"</span> "interface" "member" "state" "timezone" "Api Usage" "City" "State" "Member" "Tracker" "Locale" "LocaleLang" "LocaleReal" "Loggedin" "&#36;initial_referrer" "&#36;initial_referring_domain" "Environment" "Logged In" "Platform" "Operating System Version" "&#36;search_engine" "Profile Country" "Timezone" "Premium" "iPhone" "SignUp Cohort" "SignUp Cohort Date" "SignUp Offer" "SignUp iPhone" "SignUp OAuth" "Condition" "Activity Level" "Api Usage Date" "Api User" "utm_source" "utm_medium" "utm_campaign" "Age" "Has Android App" "Paired One" "Has iPhone App" "Paired Zip" "Paired Aria" "Height" "Premium Expired" "Paired Devices" "Goal Weight Change" "Paired Force" "Paired Ultra" "Gender" "Google Linked" "GoalPrimary" "Food Plan Intensity" "Paired Flex" <span class="fragment highlight-blue">"Body Type"</span> "User Age Range" "Paired Classic" "Facebook Linked" "!PAGE_TYPE" "!UI_EVENT" "!TIME_PERIOD" "!DATA_TYPE" "!FILE_FORMAT" "token"</p>
+          </section>
+          <section>
+            <h1>"Body Type": null</h1>
+          </section>
+        </section> -->
+
+        <!-- <section>
+          <section>
+            <h3>&hellip;but</h3>
+            <h4 class="fragment">we have choices</h4>
+            <aside class="notes">
+              <p>&hellip; we can't.</p>
+              <p>By selecting where we put ourr data, we can make it easier for users to download it</p>
+            </aside>
+          </section>
+          <section>
+            <img src="images/runkeeper.png" />
+          </section>
+
+          <section>
+            <img src="images/healthgraph.png"  style="background-color:#444;padding:1em;border-radius:1em"/>
+          </section>
+        </section> -->
+
+        <section>
+          <div class="left">
+            <h2>As a runner,</h2>
+            <h2>I want my data as a CSV file,</h2>
+            <h2>So that I can explore it</h2>
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h1>Approach 1.</h1>
+            <h2 class="fragment">Go to runkeeper.com</h2>
+          </section>
+          <section><img src="images/runkeeper-export.png" /></section>
+          <section><img src="images/finder-runkeeper-export.png" /></section>
+          <section class="good-bad">
+            <h3>👌</h3>
+            <ul>
+              <li class="fragment">We're done!</li>
+            </ul>
+
+            <h3 class="fragment">❌</h3>
+            <ul>
+              <li class="fragment">No format options</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Approach 2.</h1>
+            <h2 class="fragment">Write a script</h2>
+          </section>
+          <section><img src="images/runkeeper-export-script.png" /></section>
+          <section class="good-bad">
+            <h3>👌</h3>
+            <ul>
+              <li class="fragment">Any format we want</li>
+            </ul>
+
+            <h3 class="fragment">❌</h3>
+            <ul>
+              <li class="fragment">Inaccessible</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Approach 3.</h1>
+            <h2 class="fragment">Build a website</h2>
+          </section>
+          <section>
+            <img src="images/app-login.png" class="stretch" />
+          </section>
+
+          <section>
+            <img src="images/app-downloading.png" class="stretch" />
+          </section>
+
+          <section><h2 style="font-size:120%">
+            api &larr; web server &larr; browser
+          </h2></section>
+
+          <section class="good-bad">
+            <h3>👌</h3>
+            <ul>
+              <li class="fragment">Accessible</li>
+            </ul>
+
+            <h3 class="fragment">❌</h3>
+            <ul>
+              <li class="fragment">Complex backend</li>
+              <li class="fragment">privacy issues</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h1> </h1>
+            <h1>Approach 4.</h1>
+            <h2 class="fragment">Use the browser</h2>
+          </section>
+
+
+          <section>
+            <img src="images/rk-data-1.png" class="stretch" />
+          </section>
+          <section>
+            <img src="images/rk-data-2.png" class="stretch" />
+          </section>
+
+          <!-- <section>
+            <img src="images/app-login.png" class="stretch" />
+          </section>
+
+          <section>
+            <img src="images/app-sw.png" class="stretch" />
+          </section> -->
+
+
+          <section><h2 class="bang-fragments" style="font-size:90%">
+            api &larr; web server &larr; browser <span class="fragment">&rarr; api</span>
+          </h2></section>
+
+
+          <section>
+            <pre><code class="javascript" data-trim>
+
+fetch('http://api.runkeeper.com/activities?token=TOKEN')
+  .then(function(res) { return res.json() })
+  .then(function(json){
+    db.activities.add(json)
+  })
+
+            </code></pre>
+          </section>
+
+
+          <section class="good-bad">
+            <h3>👌</h3>
+            <ul>
+              <li class="fragment">Data only stored by user</li>
+              <li class="fragment">Simple backend</li>
+              <li class="fragment">Instant Access</li>
+            </ul>
+
+            <h3 class="fragment">❌</h3>
+            <ul>
+              <li class="fragment">CSV file</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Approach 4.b</h1>
+            <h2 class="fragment">+ Service workers</h2>
+          </section>
+
+          <section>
+            <pre><code class="javascript">navigator.serviceWorker.register('sw.js')</code></pre>
+          </section>
+
+          <section>
+            <pre><code class="javascript" data-trim>
+
+if(event.request.url.match(/sw\/hello\.txt$/)){
+  event.respondWith(
+    new Response( `Hello from your Service Worker! (at ${getTime()})`, {
+      headers: { 'Content-Type': 'plain/text' }
+    })
+  )
+})
+
+            </code></pre>
+          </section>
+          <section>
+            <h1><a href="/sw/hello.txt" target="_blank">sw/hello.txt</a></h1>
+          </section>
+          <section>
+          <pre><code class="javascript" data-trim>
+
+if(event.request.url.match(/sw\/activities\.csv$/)){
+  event.respondWith(
+    generateCSVString()
+    .then(function(str){
+      return new Response( str, {
+        headers: { 'Content-Type': 'text/csv' }
+      })
+    })
+  )
+}
+          </code></pre>
+
+        </section>
+
+        <section>
+          <img src="images/rk-data-3.png" class="stretch" />
+        </section>
+
+        <section>
+          <img src="images/rk-data-4.png" class="stretch" />
+        </section>
+
+        <section>
+          <h2>activities.csv</h2>
+          <h2 class="fragment">activities.json</h2>
+          <h2 class="fragment">geo.json</h2>
+          <h2 class="fragment">paths.bin</h2>
+        </section>
+
+        <section>
+          <pre><code class="javascript" data-trim>
+fetch('/sw/activities.json')
+  .then(toJSON)
+  .then(render)
+          </code></pre>
+        </section>
+
+      </section>
+
+      <!-- <section>
+        <section><h2>The brilliant bit</h2></section>
+      </section> -->
+
+
+      <section>
+        <h1><span class="heading-2">/</span></h1>
+      </section>
+
+
+        <section>
+          <section>
+            <h1><span class="heading-3">Drawing data</span></h1>
+            <!--
+            ANGLE:
+
+              THE WEB IS REALLY GOOD FOR GATHERING DATA, BUT IT'S ALSO
+              PRETTY GOOD FOR VIEWING IT TOO.
+
+            -->
+            <br/>
+            <h4 class="fragment"><em><small>(or, creating a system for drawing data)</small></em></h4>
+
+          </section>
+
+
+          <section data-slide-script="runkeeperActivityCount">
+            <h1 class="value">-</h1>
+          </section>
+
+          <section>
+            <pre><code class="javascript" data-trim>
+fetch('summary.json')
+  .then(function(res){return res.json()})
+  .then(function(summary){
+    document.getElementById('distance').innerText = summary.distance
+  })
+</code></pre>
+          </section>
+
+          <section data-slide-script="runkeeperSummary">
+            <h1 class="value">-</h1>
+          </section>
+
+          <section data-slide-script="runkeeperSummaryEarth">
+
+            <!--  don’t think anyone knows how big the world is.
+
+              Or, I don’t see how anyone can understand how big it is.
+              I can understand how far away I am from the fridge, or
+              how far it is to the nearest shop; but I haven’t a clue
+              about how big the world is.
+
+              Other than “really big” perhaps. -->
+          </section>
+
+          <section data-slide-script="runkeeperSummaryUK">
+            <!-- I really like turning the map on its side, ireland is like
+              the mild weathered island off the coast -->
+          </section>
+
+          <section data-slide-script="runkeeperDuration">
+          </section>
+
+        </section>
+
+
+        <section>
+          <!-- <section>
+            <h1>Looking for answers</h1>
+          </section> -->
+
+          <section>
+            <h2>Where do I like to run?</h2>
+          </section>
+
+          <section data-slide-script="runkeeperGeoCanvas">
+
+            <!-- <span class="fragment" data-canvas-poi='{"lng": -1.8833,"lat":54.5, "margin":4, "name":"uk"}'></span>
+            <span class="fragment" data-canvas-poi='{"lng": -1.2322173322475571, "lat": 51.75219395439743, "margin": 2, "name":"england"}'></span>
+            <span class="fragment" data-canvas-poi='{"lng": -1.2322173322475571, "lat": 51.75219395439743, "margin": 0.05, "name":"oxford"}'></span>
+            <span class="fragment" data-canvas-poi='{"lng": -0.1897, "lat":50.8429, "margin":0.045, "name":"brighton"}'></span>
+            <span class="fragment" data-canvas-poi='{"lng": -116.9667, "lat": 51.3019, "margin": 0.04, "name":"golden"}'></span> -->
+
+          </section>
+
+          <!-- <section>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+              <style>
+                use.map{
+                  fill:#000;
+                  transition: .85s transform !important;
+                }
+                use.map.fragment {
+                  opcity: 1;
+                  transform: translate(0, 600px)
+                }
+                use.map.fragment.right{
+                  transform: translate(500px, 0)
+                }
+                use.map.fragment.left{
+                  transform: translate(-500px, 0)
+                }
+                use.map.fragment.visible {
+                  transform: translate(0, 0)
+                }
+              </style>
+              <use x="-300" xlink:href="images/uk-path.svg#map" class="map fragment left"/>
+              <use x="300" xlink:href="images/uk-path-equi.svg#map"  class="map fragment right"/>
+           </svg>
+          </section> -->
+
+          <section>
+            <ul class="points">
+              <li class="negative">Data ink ratio</li>
+              <li class="negative">Equirectangular projection</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>d3.geo</h1>
+          </section>
+
+          <section data-slide-script="d3Projections">
+            <aside class="notes">
+              <ol>
+                <li>projection for mapping from equi -> usual</li>
+                <li>
+              </ol>
+            </aside>
+          </section>
+
+          <section data-slide-script="runkeeperPaths">
+            <aside class="notes">
+              <ol>
+                <li>Start with a single path, describe the use of an svg</li>
+                <li>bring in the rest</li>
+                <li>by displaying the paths together we've solved the problem of the canvas map</li>
+                <li>bounding boxes</li>
+                <li>Oxford - showing the gathered together paths</li>
+                <li>Brighton - where we are, shoreham, hacks</li>
+              </ol>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Where do I like to run?</h2>
+          </section>
+
+          <section>
+            <pre><code class="javascript" data-trim>
+fetch('/sw/paths.binary')
+  .then(toArrayBuffer)
+  .then(renderThreeJSPaths)
+            </code></pre>
+          </section>
+
+          <section  data-slide-script="runkeeperGlobe">
+          </section>
+
+        </section>
+
+
+        <section>
+          <h1><span class="heading-3">/</span></h1>
+        </section>
+
+
+        <section>
+          <section>
+            <h1><span class="heading-4" style="font-size:85%">Being personal</span></h1>
+          </section>
+
+          <section>
+            <img src="images/leeb.jpg" />
+            <aside class="notes">
+              Lee Byron 2006
+            </aside>
+          </section>
+
+          <section>
+            <img src="images/leeb-more.jpg" class="stretch" />
+          </section>
+
+          <section data-slide-script="runkeeperCalendar" class="bang-fragments-v">
+          </section>
+
+          <section>
+            <img src="images/finder-running-thoughts.png" class="stretch" />
+          </section>
+
+          <!-- <section>
+            <h1>Be open with your data</h1>
+          </section> -->
+
+          <section class="bang-fragments">
+            <h3 style="font-size:90%">
+              <span class="fragment" data-fragment-index="3">Humans &rarr;</span>
+              <span class="fragment" data-fragment-index="1">Data &rarr;</span>
+              Pictures
+              <span class="fragment" data-fragment-index="2">&rarr; Humans</span>
+            </h3>
+          </section>
+
+        </section>
+
+
+
+
+        <section>
+          <h1><span class="heading-4">/</span></h1>
+        </section>
+
+
+        <section>
+          <section>
+            <h2><span class="heading-5">Being generative</span></h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <img src="images/publishing-rooms-foxall.png" class="stretch"/>
+          </section>
+
+
+          <section data-background="images/PR-0.jpg"></section>
+          <section data-background="images/PR-1.jpg"></section>
+          <section data-background="images/PR-2.jpg"></section>
+          <section data-background="images/PR-6.jpg"></section>
+          <!-- <section data-background="images/PR-3.png" data-background-size="100%"></section>
+          <section data-background="images/PR-4.png" data-background-size="100%"></section> -->
+          <section data-background="images/PR-3+4.png"></section>
+          <!-- <section data-background="images/PR-5.jpg"></section> -->
+          <section data-background="images/PR-7.jpg" data-background-size="100%"></section>
+          <section data-background="images/PR-8.jpg"></section>
+          <section data-background="images/PR-8.jpg"></section>
+          <section data-background="images/PR-9.jpg"></section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>CSV</h2>
+          </section>
+
+          <section>
+            <img src="images/charting-tools.png" class="stretch" />
+          </section>
+
+          <section>
+            <img src="images/charting-tools-lisa.png" class="stretch" />
+          </section>
+
+
+          <section>
+            <h2>“If you make a system for drawing, you can change the parameters and create something entirely new”</h2>
+            <cite><small>– Mike, a couple of hours ago</small></cite>
+          </section>
+
+
+          <section>
+            <div class="left">
+              <h2>GET /path</h2>
+              <h2>GET /path.csv</h2>
+              <h2>GET /path.json</h2>
+            </div>
+          </section>
+
+          <section>
+            <img src="images/snazzy-chart.png" class="stretch"/>
+            <aside class="notes">
+              <!-- When you make a great graph,
+              it's even greater if you give other people the tools to do the same thing -->
+            </aside>
+          </section>
+
+        </section>
+
+
+        <section>
+          <section>
+            <h2><span class="heading-5">/</span></h2>
+          </section>
+        </section>
+
+
+        <section>
+          <h4>…</h4>
+          <div class="left">
+            <h3 class="fragment">Visualisation: Data &rarr; Pictures &rarr; Humans</h3>
+            <h3 class="fragment">Browsers &amp; Visualisation = 👌👌</h3>
+            <h3 class="fragment">Create things</h3>
+            <h3 class="fragment">Let other people create things</h3>
+          </div>
+        </section>
+<!--
+        <section>
+            <section>
+              <h2>So&hellip;</h2>
+              <h1 class="fragment">Be open</h1>
+              <h1 class="fragment">Be yourself</h1>
+            </section>
+            <!- -
+              TODO: Conclusion
+
+              * Your data is nothing without you
+              * Know what
+
+              When you're creating something
+              * Think about people
+              * Think further than the chart
+
+            - ->
+        </section> -->
+
+        <section>
+          <div class="left">
+            <h3><a href="http://publishingrooms.com/">publishingrooms.com</a></h3>
+            <h3><a href="https://runkeeper-data.herokuapp.com/">runkeeper-data.herokuapp.com</a></h3>
+            <h3><a href="https://blog.pusher.com/offline-and-realtime/">blog.pusher.com/offline-and-realtime</a></h3>
+          </div>
+        </section>
+
+
+        <section>
+            <section>
+              <h1>Thanks</h1>
+              <h2>@benjaminbenben</h2>
+              <div class="badges">
+                <img src="images/pusher_logo_p_dark.svg"/>
+                <!-- <img src="images/wo-1.png"          /> -->
+
+                <img src="images/soh.svg"      />
+                <img src="images/jsoxford-new.png"      />
+                <!-- <img src="img/jq-sm.png"         /> -->
+                <!-- <img src="img/adventure-club.png"/> -->
+                <!-- <img src="img/do.png"/> -->
+              </div>
+            </section>
+            <!--
+              TODO: Conclusion
+
+              * Your data is nothing without you
+              * Know what
+
+              When you're creating something
+              * Think about people
+              * Think further than the chart
+
+            -->
+        </section>
+
+
+
+      </div>
+
+    </div>
+
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      var options = {
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+
+        // width: 1280,
+        // height: 720,
+
+        // 4:3
+        width: 1024,
+        height: 768,
+
+        margin: 0,
+
+        transition: 'slide',
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+          // { src: 'bower_components/reveal.js/plugin/math/math.js', async: true },
+          { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Slide deps
+          { src: 'components/dynamic-slide/dynamic-slide.js', async: false },
+
+          //
+          { src: 'bower_components/d3/d3.js', async: false },
+          { src: 'bower_components/topojson/topojson.js', async: false },
+          { src: 'sources/runkeeper/geofn.js', async: false },
+
+          { src: 'sources/runkeeper/bower_components/threejs/build/three.js', async: false },
+          { src: 'sources/runkeeper/three.orbit.js', async: false },
+
+          { src: 'sources/runkeeper/bower_components/tweenjs/build/tween.min.js', async: false },
+
+          { src: 'bower_components/sylvester/sylvester.js', async: false },
+
+
+          // TODO rewrite
+
+          // {src: 'js/logo.wo.slide.js', async: true, callback: function(){
+          //   new LogoWO('#wologo')
+          // }},
+
+          {src: 'js/logo.jsox.slide.js', async: true, callback: function(){
+            new LogoJSOx('#jsoxford')
+          }},
+
+        ],
+
+        // // if I've bothered to install it locally
+        // // bower install mathjax
+        // math: {
+        //    mathjax: 'bower_components/MathJax/MathJax.js'
+        // }
+      };
+
+
+      // look through slides for any dependencies and load them
+      [].forEach.call(document.querySelectorAll('[data-slide-script]'),function(el) {
+        var key = el.dataset.slideScript;
+        var src = 'slidejs/' + key + '.js';
+        var orig;
+
+        var found = options.dependencies.filter(function(dep){
+          return dep.src == src;
+        })[0];
+
+        if(found) {
+          var orig = found.callback;
+          found.callback = callback;
+          return;
+        }
+
+        options.dependencies.push({
+          src: src,
+          async: true,
+          callback: callback
+        })
+
+        function callback(){
+          var Fn = window[key];
+          if(typeof(Fn) !== 'function')
+            throw new Error('slide Fn not defined: ' + key + '()')
+
+          if(orig) orig();
+          new Fn(el);
+        }
+      })
+
+
+      Reveal.initialize(options);
+
+    </script>
+
+  </body>
+</html>
